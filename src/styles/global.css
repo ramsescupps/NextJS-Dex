@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .wrapped-item\:mt-4> :not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(36, 47, 54, 1);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(8, 12, 19, 1);
+}
+
+.radius-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  /* Same as the container's border-radius */
+}
+
+.radius-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(36, 47, 54, 1);
+  border-radius: 10px;
+  /* Same as the container's border-radius */
+}
+
+.radius-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(8, 12, 19, 1);
+  border-radius: 10px;
+  /* Same as the container's border-radius */
+  margin-top: 10px;
+  /* Align scrollbar track within rounded corners */
+  margin-bottom: 10px;
+  /* Align scrollbar track within rounded corners */
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/fonts/DMSans-Bold.ttf") format("truetype");
+}
+
+* {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  font-style: normal;
+}
+
+body {
+  background-color: rgba(8, 12, 19, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div,
+p,
+span {
+  color: white;
+}
+
+.bg-default-color {
+  background-color: "rgba(8, 12, 19, 1)";
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/fonts/DMSans-Bold.ttf") format("truetype");
+}
+
+.radius-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  /* Same as the container's border-radius */
+}
+
+.radius-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(36, 47, 54, 1);
+  border-radius: 10px;
+  /* Same as the container's border-radius */
+}
+
+.radius-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(8, 12, 19, 1);
+  border-radius: 10px;
+  /* Same as the container's border-radius */
+  margin-top: 10px;
+  /* Align scrollbar track within rounded corners */
+  margin-bottom: 10px;
+  /* Align scrollbar track within rounded corners */
+}
+
+#tv-attr-logo {
+  display: none !important;
+}
+
+.default-border {
+  border-color: rgba(19, 30, 56, 1);
+}
+
+.text-grandient-orange,
+.hover\:text-grandient-orange:hover {
+  background: linear-gradient(133.81deg, #ffcb1a -5.16%, #ff8d07 85.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.line-gradient-blue-dark {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, #68ffae, #30f874);
+}
+
+.bg-gradient-blue-dark {
+  background: linear-gradient(279.89deg, #30f874 25.68%, #68ffae 76.3%);
+}
+
+.bg-gradient-blue-light {
+  background: linear-gradient(262.57deg, #00ff85 -42.5%, #81ffc2 55.8%);
+}
+
+.bg-gradient-red {
+  background: linear-gradient(0deg, #ff856a, #ff856a),
+    linear-gradient(92.82deg, #ff856a 13.07%, rgba(255, 255, 255, 0) 80.99%);
+}
+
+.bg-linear-gradient-yellow {
+  background: linear-gradient(75.93deg, #ffdc85 26.34%, #ffb704 72.87%);
+}
+
+.bg-radial-gradient-yellow {
+  background: radial-gradient(rgb(135 107 39), transparent);
+}
+
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  /* Make sure it stays behind the content */
+  border-radius: inherit;
+  /* Maintain any border-radius */
+}
+
+.border-gradient-dark-2px {
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+.border-gradient-dark-2px::before {
+  padding: 2px;
+  /* This defines the width of the border */
+  background: linear-gradient(279.89deg,
+      rgba(123, 123, 123, 0.1056) 25.68%,
+      rgba(255, 255, 255, 0.0924) 76.3%);
+}
+
+.border-gradient-green-2px {
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+.border-gradient-green-2px::before {
+  padding: 2px;
+  background: linear-gradient(88.52deg,
+      rgba(48, 248, 116, 0.41) 10.17%,
+      rgba(104, 255, 174, 0.29) 76.23%);
+}
+
+.rounded-except-bottom {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.rounded-except-top {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+/* Parent container with padding for scrollbar space */
+.dropdown-menu {
+  max-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-menu.visible {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.glass-stroke-xl {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.notification-backround {
+  background-color: rgba(0, 0, 0, 0)
+}
